@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KG Lab Assignment</title>
-    <link rel="alternate" type="application/ld+json" href="data.jsonld">
-    <script type="application/ld+json">
-    {
-      "@context": {
-        "@vocab": "http://schema.org/",
-        "name": "http://xmlns.com/foaf/0.1/name",
-        "course": "https://pietercolpaert.be/teaching/kg/#2024-2025"
-      },
-      "@type": "Person",
-      "name": "Your Name",
-      "course": "https://pietercolpaert.be/teaching/kg/#2024-2025"
-    }
-    </script>
-</head>
-<body>
-<h1>KG Lab Assignment</h1>
-<p>This page contains embedded JSON-LD metadata.</p>
-</body>
-</html>
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "http://schema.org/"
+  },
+  "@id":"#course",
+  "@type": "schema:Course",
+  "schema:courseCode": "E018160",
+  "schema:name": "Knowledge Graphs",
+  "schema:url": "https://studiekiezer.ugent.be/studiefiche/en/E018160/2023",
+  "schema:provider": {
+    "@type": "schema:CollegeOrUniversity",
+    "schema:name": "Ghent University",
+    "@id": "http://www.wikidata.org/entity/Q1137665",
+    "schema:url": "https://ugent.be"
+  },
+  "schema:hasCourseInstance": [ {
+    "@id": "#2023-2024",
+    "@type": "schema:CourseInstance",
+    "schema:startDate": "2024-02-15"
+  },
+   { 
+	   "@id": "#2024-2025",
+    "@type": "schema:CourseInstance",
+    "schema:startDate": "2025-02-14"
+   }
+  ]
+}
+</script>
