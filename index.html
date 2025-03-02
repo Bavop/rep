@@ -1,30 +1,49 @@
 
 <script type="application/ld+json">
 {
-  "@context": {
-    "schema": "http://schema.org/"
-  },
-  "@id":"#course",
-  "@type": "schema:Course",
-  "schema:courseCode": "E018160",
-  "schema:name": "Knowledge Graphs",
-  "schema:url": "https://studiekiezer.ugent.be/studiefiche/en/E018160/2023",
-  "schema:provider": {
-    "@type": "schema:CollegeOrUniversity",
-    "schema:name": "Ghent University",
-    "@id": "http://www.wikidata.org/entity/Q1137665",
-    "schema:url": "https://ugent.be"
-  },
-  "schema:hasCourseInstance": [ {
-    "@id": "#2023-2024",
-    "@type": "schema:CourseInstance",
-    "schema:startDate": "2024-02-15"
-  },
-   { 
-	   "@id": "#2024-2025",
-    "@type": "schema:CourseInstance",
-    "schema:startDate": "2025-02-14"
-   }
-  ]
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/"
+    },
+    "@id": "https://bavopaepens.be/#me",
+    "@type": "foaf:Person",
+    "foaf:firstName": {
+        "@value": "Bavo",
+        "@language": "en"
+    },
+    "foaf:lastName": {
+        "@value": "Paepens",
+        "@language": "en"
+    },
+    "foaf:knows": [
+        {
+            "foaf:firstName": {
+                "@value": "Bavo",
+                "@language": "en"
+            },
+            "foaf:lastName": {
+                "@value": "Paepens",
+                "@language": "en"
+            }
+        },
+        {
+            "foaf:firstName": {
+                "@value": "Bavo",
+                "@language": "en"
+            },
+            "foaf:lastName": {
+                "@value": "Paepens",
+                "@language": "en"
+            }
+        }
+    ],
+    "http://dbpedia.org/ontology/nationality": "Belgian",
+    "http://schema.org/birthDate": {
+        "@value": "07/04/2003",
+        "@type": "schema:date"
+    },
+    "foaf:interest": "Automation",
+    "http://www.aktors.org/ontology/portal#works-for": "FixSus",
+    "https://d-nb.info/standards/elementset/gnd#fieldOfStudy": "Master in Computer Science"
 }
 </script>
