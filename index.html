@@ -2,36 +2,26 @@
 {
     "@context": {
         "foaf": "http://xmlns.com/foaf/0.1/",
-        "schema": "https://schema.org/"
+        "schema": "https://schema.org/",
+        "dbpedia": "http://dbpedia.org/ontology/",
+        "aktors": "http://www.aktors.org/ontology/portal#",
+        "gnd": "https://d-nb.info/standards/elementset/gnd#",
+        "foaf:knows": { "@type": "@id" },
+        "schema:follows": { "@type": "@id" }
     },
     "@id": "https://bavop.github.io/rep/#me",
     "@type": "foaf:Person",
-    "foaf:firstName": {
-        "@value": "Bavo",
-        "@language": "en"
-    },
-    "foaf:lastName": {
-        "@value": "Paepens",
-        "@language": "en"
-    },
-    "schema:follows": {
-        "@id":"https://pietercolpaert.be/teaching/kg/#2024-2025"
-    },
+    "foaf:firstName": { "@value": "Bavo", "@language": "en" },
+    "foaf:lastName": { "@value": "Paepens", "@language": "en" },
+    "schema:follows": "https://pietercolpaert.be/teaching/kg/#2024-2025",
     "foaf:knows": [
-        {
-            "@id" : "https://www.ebisi.be/stijndeknudt"
-        },
-        {
-            "@id":"https://lippelo.me/#erwin.geeraerts"
-        }
+        "https://www.ebisi.be/stijndeknudt",
+        "https://lippelo.me/#erwin.geeraerts"
     ],
-    "http://dbpedia.org/ontology/nationality": "Belgian",
-    "http://schema.org/birthDate": {
-        "@value": "07/04/2003",
-        "@type": "schema:date"
-    },
+    "dbpedia:nationality": "Belgian",
+    "schema:birthDate": { "@value": "2003-04-07", "@type": "schema:date" },
     "foaf:interest": "Automation",
-    "http://www.aktors.org/ontology/portal#works-for": "FixSus",
-    "https://d-nb.info/standards/elementset/gnd#fieldOfStudy": "Master in Computer Science"
+    "aktors:works-for": "FixSus",
+    "gnd:fieldOfStudy": "Master in Computer Science"
 }
 </script>
