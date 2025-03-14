@@ -1,0 +1,35 @@
+<script type="text/turtle">
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cust: <https://bavop.github.io/rep/schema#> .
+
+<https://bavop.github.io/rep/schema> a owl:Ontology ;
+	dc:title "Vocabulary for Knowledge Graphs"
+
+cust:Photo a rdfs:Class ;
+    rdfs:label "Photo";
+    rdfs:comment "A picture".
+cust:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A Person" .
+
+cust:Location a rdfs:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "Location where photo was taken" .
+
+
+cust:title a rdf:Property;
+    rdfs:label "Title";
+    rdfs:comment "Title of picture".
+
+cust:author a rdf:Property;
+    rdfs:label "Author";
+    rdfs:comment "Author of the picture";
+    rdfs:range cust:Person.
+
+
+
+
+</script>
