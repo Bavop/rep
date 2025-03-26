@@ -13,9 +13,13 @@
 <https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTStSMv9J0DOeTMmQ2OzbYYQnHhm84zsXSlZQ&s> a cust:Photo;
     cust:Location "Pasture";
     cust:Title "Lamb";
+    cust:DepictsPerson <https://example.com/lamb/#me>;
     cust:Author <https://example.com/author/#me>;
     cust:Description "Picture of a lamb on a pasture".
-
-<https://example.com/author/#me> a cust:Person.
-<https://bavop.github.io/rep/#me> a cust:Person.
+<https://example.com/lamb/#me> a cust:Person;
+    cust:name "Lamb".
+<https://example.com/author/#me> a cust:Person;
+    cust:name "Photographer1".
+<https://bavop.github.io/rep/#me> a cust:Person;
+    cust:name "Bavo Paepens".
 </script>
