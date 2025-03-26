@@ -6,7 +6,7 @@
 @prefix cust: <https://bavop.github.io/rep/schema#> .
 
 <https://bavop.github.io/rep/schema#> a owl:Ontology ;
-	dc:title "Vocabulary for Knowledge Graphs".
+	dc:title "Vocabulary for Knowledge Graphs course".
 
 cust:Photo a rdfs:Class ;
     rdfs:label "Photo";
@@ -17,15 +17,34 @@ cust:Person a rdfs:Class ;
 
 cust:Location a rdfs:Class ;
     rdfs:label "Location" ;
+    rdfs:domain cust:Photo ;
+    rdfs:range rdfs:Literal ;
     rdfs:comment "Location where photo was taken" .
-
-
-cust:title a rdf:Property;
+    
+cust:Title a rdf:Property;
     rdfs:label "Title";
+    rdfs:domain cust:Photo ;
+    rdfs:range rdfs:Literal ;
     rdfs:comment "Title of picture".
 
-cust:author a rdf:Property;
+
+cust:Author a rdf:Property;
     rdfs:label "Author";
     rdfs:comment "Author of the picture";
-    rdfs:range cust:Person.
+    rdfs:range cust:Person;
+    rdfs:domain cust:Photo.
+
+cust:DepictsPerson a rdf:Property ;
+    rdfs:label "depicts person" ;
+    rdfs:domain cust:Photo ;
+    rdfs:range cust:Person ;
+    rdfs:comment "Links a photo to a person appearing in it" .
+
+cust:Description a rdf:Property ;
+    rdfs:label "Description" ;
+    rdfs:domain cust:Photo ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Description of the photo" 
+
+
 </script>
