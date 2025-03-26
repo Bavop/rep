@@ -22,7 +22,12 @@ cust:Location a rdfs:Property ;
     rdfs:domain cust:Photo ;
     rdfs:range rdfs:Literal ;
     rdfs:comment "Location where photo was taken".
-    
+cust:name a rdf:Property;
+    rdfs:label "Name";
+    rdfs:domain cust:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Name of person";
+    owl:equivalentProperty  foaf:name. 
 cust:Title a rdf:Property;
     rdfs:label "Title";
     rdfs:domain cust:Photo ;
@@ -50,4 +55,6 @@ cust:Description a rdf:Property ;
     rdfs:domain cust:Photo ;
     rdfs:range rdfs:Literal ;
     rdfs:comment "Description of the photo".
+
+
 </script>
