@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cust: <https://bavop.github.io/rep/schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+<https://bavop.github.io/rep/schema#> a owl:Ontology ;
+	dc:title "Vocabulary for Knowledge Graphs course".
+
+cust:Photo a rdfs:Class ;
+    rdfs:label "Photo";
+    rdfs:comment "A picture";
+    owl:equivalentClass foaf:Image.
+cust:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A Person";
+    owl:equivalentClass foaf:Person.
+
+cust:Location a rdfs:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "Location where photo was taken".
+cust:takenAt a rdfs:Property;
+    rdfs:label "TakenAt";
+    rdfs:domain cust:Photo ;
+    rdfs:range cust:Location ;
+    rdfs:comment "Location where picture was taken".
+cust:name a rdf:Property;
+    rdfs:label "Name";
+    rdfs:domain cust:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Name of person";
+    owl:equivalentProperty  foaf:name. 
+cust:Title a rdf:Property;
+    rdfs:label "Title";
+    rdfs:domain cust:Photo ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Title of picture";
+    owl:equivalentProperty  foaf:name.
+
+
+cust:Author a rdf:Property;
+    rdfs:label "Author";
+    rdfs:comment "Author of the picture";
+    rdfs:range cust:Person;
+    rdfs:domain cust:Photo;
+    owl:equivalentProperty  foaf:maker.
+
+cust:DepictsPerson a rdf:Property ;
+    rdfs:label "depicts person" ;
+    rdfs:domain cust:Photo ;
+    rdfs:range cust:Person ;
+    rdfs:comment "Links a photo to a person appearing in it";
+    owl:equivalentProperty  foaf:depicts.
+
+cust:Description a rdf:Property ;
+    rdfs:label "Description" ;
+    rdfs:domain cust:Photo ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Description of the photo".
