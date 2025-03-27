@@ -1,4 +1,4 @@
-@prefix cust: <https://bavop.github.io/rep/schema#> .
+@prefix cust: <https://bavop.github.io/rep/ontology-bavo.ttl#> .
 
 
 
