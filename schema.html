@@ -17,11 +17,14 @@ cust:Person a rdfs:Class ;
     rdfs:comment "A Person";
     owl:equivalentClass foaf:Person.
 
-cust:Location a rdfs:Property ;
+cust:Location a rdfs:Class ;
     rdfs:label "Location" ;
-    rdfs:domain cust:Photo ;
-    rdfs:range rdfs:Literal ;
     rdfs:comment "Location where photo was taken".
+cust:takenAt a rdfs:Property;
+    rdfs:label "TakenAt";
+    rdfs:domain cust:Photo ;
+    rdfs:range cust:Location ;
+    rdfs:comment "Location where picture was taken".
 cust:name a rdf:Property;
     rdfs:label "Name";
     rdfs:domain cust:Person ;
@@ -55,6 +58,7 @@ cust:Description a rdf:Property ;
     rdfs:domain cust:Photo ;
     rdfs:range rdfs:Literal ;
     rdfs:comment "Description of the photo".
+
 
 
 </script>
